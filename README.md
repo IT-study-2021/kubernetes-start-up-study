@@ -13,6 +13,6 @@
 
 ## 일정
 
-  * Regular Meeting: 화요일 오후 8시 Zoom 미팅
+  * Regular Meeting: 화요일 오후 9시 Zoom 미팅
   * 필요 시 Offline 모임 (Preference: 일요일)
 
