@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-bal
+spec:
+  type: LoadBalancer # add type
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30088 # set host(node) port
+  selector:
+    run: mynginx
+---
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: load-bal
+  name: load-bal
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    ports:
+    - containerPort: 80
